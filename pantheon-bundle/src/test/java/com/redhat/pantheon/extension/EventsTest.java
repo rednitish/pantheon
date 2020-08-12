@@ -1,6 +1,6 @@
 package com.redhat.pantheon.extension;
 
-import com.redhat.pantheon.extension.events.ModuleVersionPublishedEvent;
+import com.redhat.pantheon.extension.events.module.ModuleVersionPublishedEvent;
 import com.redhat.pantheon.model.module.ModuleVersion;
 import org.apache.sling.event.jobs.JobBuilder;
 import org.apache.sling.event.jobs.JobManager;

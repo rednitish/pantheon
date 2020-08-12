@@ -4,6 +4,7 @@ import com.redhat.pantheon.asciidoctor.AsciidoctorService;
 import com.redhat.pantheon.model.api.SlingModels;
 import com.redhat.pantheon.model.module.Module;
 import com.redhat.pantheon.model.workspace.Workspace;
+import com.redhat.pantheon.servlet.module.ModuleVersionUpload;
 import org.apache.commons.lang3.LocaleUtils;
 import org.apache.sling.api.resource.NonExistingResource;
 import org.apache.sling.servlets.post.HtmlResponse;

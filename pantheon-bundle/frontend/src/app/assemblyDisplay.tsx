@@ -27,6 +27,7 @@ class AssemblyDisplay extends Component<any, any, any> {
             releaseUpdateDate: '',
             releaseVersion: '',
             results: {},
+            type: '',
             variant: 'DEFAULT',
             versionValue: ""
         }
@@ -143,6 +144,7 @@ class AssemblyDisplay extends Component<any, any, any> {
                         <Card>
                             <Versions
                                 modulePath={this.state.modulePath}
+                                type="assembly"
                                 productInfo={this.state.productValue}
                                 versionModulePath={this.state.moduleTitle}
                                 variant={this.state.variant}

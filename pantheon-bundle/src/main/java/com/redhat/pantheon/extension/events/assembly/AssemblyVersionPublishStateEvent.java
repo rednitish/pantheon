@@ -1,6 +1,7 @@
-package com.redhat.pantheon.extension.events;
+package com.redhat.pantheon.extension.events.assembly;
 
 import com.redhat.pantheon.extension.Event;
+import com.redhat.pantheon.model.assembly.AssemblyVersion;
 import com.redhat.pantheon.model.module.ModuleVersion;
 
 import javax.annotation.Nonnull;
@@ -10,12 +11,12 @@ import javax.annotation.Nonnull;
  * Includes the module version path so it can be re-fetched in the
  * handlers if necessary.
  */
-public class ModuleVersionPublishStateEvent implements Event {
+public class AssemblyVersionPublishStateEvent implements Event {
 
     private final String moduleVersionPath;
 
-    protected ModuleVersionPublishStateEvent(@Nonnull ModuleVersion moduleVersion) {
-        this.moduleVersionPath = moduleVersion.getPath();
+    protected AssemblyVersionPublishStateEvent(@Nonnull AssemblyVersion assemblyVersion) {
+        this.moduleVersionPath = assemblyVersion.getPath();
     }
 
     public String getModuleVersionPath() {

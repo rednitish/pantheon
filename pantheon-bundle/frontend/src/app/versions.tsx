@@ -12,6 +12,7 @@ import { Redirect } from 'react-router-dom'
 
 export interface IProps {
     modulePath: string
+    type: string
     productInfo: string
     versionModulePath: string
     variant: string
@@ -470,11 +471,13 @@ class Versions extends Component<IProps, IState> {
                 const formData = new FormData();
                 if (buttonText === 'Publish') {
                     formData.append(':operation', 'pant:publish');
+                    formData.append('type', this.props.type);
                     // console.log('Published file path:', this.props.modulePath)
                     this.draft[0].version = '';
                 } else {
                     formData.append(':operation', 'pant:unpublish');
                     // console.log('Unpublished file path:', this.props.modulePath);
+                    formData.append('type', this.props.type);
                     this.release[0].version = '';
                 }
                 formData.append('locale', 'en_US')
