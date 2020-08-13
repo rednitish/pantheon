@@ -144,7 +144,7 @@ class ModuleDisplay extends Component<any, any, any> {
                         <Card>
                             <Versions
                                 modulePath={this.state.modulePath}
-                                type="module"
+                                type={Fields.MODULE_TYPE}
                                 productInfo={this.state.productValue}
                                 versionModulePath={this.state.moduleTitle}
                                 variant={this.state.variant}
