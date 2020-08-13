@@ -172,12 +172,6 @@ public class PublishDraftVersion extends AbstractPostOperation {
             response.setStatus(HttpServletResponse.SC_PRECONDITION_FAILED,
                     "The version to be released doesn't have productVersion metadata");
             return ;
-        } else if (versionToRelease.get().metadata().getOrCreate().urlFragment().get() == null
-                || versionToRelease.get().metadata().getOrCreate().urlFragment().get().isEmpty()) {
-            // Check if urlFragment is set
-            response.setStatus(HttpServletResponse.SC_PRECONDITION_FAILED,
-                    "The version to be released doesn't have urlFragment metadata");
-            return ;
         }
         // Draft becomes the new released version
         ModuleVariant moduleVariant = traverseFrom(module)
@@ -242,12 +236,6 @@ public class PublishDraftVersion extends AbstractPostOperation {
                 // Check if productVersion is set
                 response.setStatus(HttpServletResponse.SC_PRECONDITION_FAILED,
                         "The version to be released doesn't have productVersion metadata");
-                return ;
-            } else if (versionToRelease.get().metadata().getOrCreate().urlFragment().get() == null
-                    || versionToRelease.get().metadata().getOrCreate().urlFragment().get().isEmpty()) {
-                // Check if urlFragment is set
-                response.setStatus(HttpServletResponse.SC_PRECONDITION_FAILED,
-                        "The version to be released doesn't have urlFragment metadata");
                 return ;
             }
                 // Draft becomes the new released version
