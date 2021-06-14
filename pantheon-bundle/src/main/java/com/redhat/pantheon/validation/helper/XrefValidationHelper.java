@@ -29,8 +29,9 @@ public class XrefValidationHelper {
     }
 
     public void setObjectsToValidate(List<String> objectsToValidate) {
-        if(objectsToValidate.size()>0){
-            xRefs.addAll(objectsToValidate);
+        if(null == xRefs || objectsToValidate.isEmpty()){
+            return;
         }
+        xRefs.addAll(objectsToValidate);
     }
 }
